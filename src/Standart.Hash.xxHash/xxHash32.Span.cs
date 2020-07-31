@@ -1,6 +1,6 @@
-﻿using System;
+﻿#if !NETSTANDARD2_0 && !NET48
+using System;
 using System.Diagnostics;
-
 namespace Standart.Hash.xxHash
 {
     using System.Runtime.InteropServices;
@@ -46,3 +46,4 @@ namespace Standart.Hash.xxHash
         }
     }
 }
+#endif

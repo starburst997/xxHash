@@ -1,4 +1,5 @@
-﻿namespace Standart.Hash.xxHash
+﻿#if !NETSTANDARD2_0 && !NET48
+namespace Standart.Hash.xxHash
 {
     using System.Buffers;
     using System.Diagnostics;
@@ -86,3 +87,4 @@
         }
     }
 }
+#endif
