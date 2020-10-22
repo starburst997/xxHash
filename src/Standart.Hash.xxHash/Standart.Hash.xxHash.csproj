@@ -18,5 +18,9 @@
   <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.1'">
     <DefineConstants>FCL_BITOPS</DefineConstants>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Server' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
   
 </Project>
