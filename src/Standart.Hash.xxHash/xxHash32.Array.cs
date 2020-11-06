@@ -19,7 +19,7 @@
             
             fixed (byte* pData = &data[0])
             {
-                return UnsafeComputeHash(pData, length, seed);
+                return ComputeHash(pData, length, seed);
             }
         }
 
@@ -40,7 +40,7 @@
             
             fixed (byte* pData = &data[0 + offset])
             {
-                return UnsafeComputeHash(pData, length, seed);
+                return ComputeHash(pData, length, seed);
             }
         }
         /// <summary>

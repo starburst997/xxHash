@@ -22,7 +22,7 @@ namespace Standart.Hash.xxHash
 
             fixed (byte* pData = &MemoryMarshal.GetReference(data))
             {
-                return UnsafeComputeHash(pData, length, seed);
+                return ComputeHash(pData, length, seed);
             }
         }
         
@@ -41,7 +41,7 @@ namespace Standart.Hash.xxHash
 
             fixed (byte* pData = &MemoryMarshal.GetReference(data))
             {
-                return UnsafeComputeHash(pData, length, seed);
+                return ComputeHash(pData, length, seed);
             }
         }
     }
