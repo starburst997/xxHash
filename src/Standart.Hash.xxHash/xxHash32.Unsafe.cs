@@ -18,7 +18,7 @@
         /// <param name="seed"></param>
         /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe uint ComputeHash(byte* ptr, int length, uint seed)
+        public static unsafe uint ComputeHash(byte* ptr, int length, uint seed = 0)
         {
             byte* end = ptr + length;
             uint h32;
