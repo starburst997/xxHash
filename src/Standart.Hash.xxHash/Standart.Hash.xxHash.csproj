@@ -21,6 +21,7 @@
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Server' ">
     <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
   </PropertyGroup>
   
 </Project>
