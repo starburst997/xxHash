@@ -3,7 +3,7 @@
   <Import Project="..\..\nuget.props" />
   
   <PropertyGroup>
-    <TargetFrameworks>net48;netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net48;netstandard2.0;netstandard2.1;netcoreapp3.1;netcoreapp5.0</TargetFrameworks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Configurations>Debug;Release;Server</Configurations>
     <Platforms>AnyCPU</Platforms>
@@ -17,6 +17,11 @@
 
   <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.1'">
     <DefineConstants>FCL_BITOPS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Server' ">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
   </PropertyGroup>
   
 </Project>
